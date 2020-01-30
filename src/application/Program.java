@@ -18,14 +18,14 @@ public class Program {
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
+		/*
+
 		System.out.println("=== TEST 1: seller findById =====");
-		
 		Seller seller = sellerDao.findById(3);
-		
 		System.out.println(seller);
 		
-		System.out.println("/n=== TEST 2: seller findByDepartment =====");
-		Department department = new Department (2,null);
+		 System.out.println("/n=== TEST 2: seller findByDepartment =====");
+		Department department = new Department (1,null);
 		List<Seller> list = sellerDao.findByDepartment(department);
 		for (Seller obj : list) {
 			System.out.println(obj);
@@ -37,17 +37,28 @@ public class Program {
 		for (Seller obj : list) {
 			System.out.println(obj);
 		}
+
+
 		
 		System.out.println("/n=== TEST 4: seller insert =====");
-		Seller newSeller = new Seller (null,"Greg", "greg@gmail.com", new Date() , 4000.00 , department );
+		Department department = new Department (1,null);
+		Seller newSeller = new Seller (null,"Denilson", "denilson.dlr@gmail.com", new Date() , 20000.00 , department );
 		sellerDao.insert(newSeller);
 		System.out.println("Insert ! New id = " + newSeller.getId());
+
+       */
 		
 		System.out.println("/n=== TEST 5: seller update =====");
-		seller = sellerDao.findById(1);
-		seller.setName("Martha Waine");
+		Seller seller = sellerDao.findById(8);
+		seller = sellerDao.findById(8);
+		seller.setName("Mariana Bueno Leite");
+		seller.setBaseSalary(30000.00);
 		sellerDao.update(seller);
 		System.out.println("Update completed");
+
+		/*
+
+
 		
 		System.out.println("/n=== TEST 6: seller delete =====");
 		System.out.println("Enter id for delete test:");
@@ -56,6 +67,8 @@ public class Program {
 		System.out.println("Delete completed");
 		
 		sc.close();
+
+		*/
 		
 
 
